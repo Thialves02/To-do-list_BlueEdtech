@@ -8,7 +8,7 @@ html,body{
 }
 
 .Navbar{
-    width: 25%;
+    min-width: 25%;
     background: #F1F1F1;
     height:100vh;
 }
@@ -41,6 +41,10 @@ html,body{
     margin: 0 0 13px 10px;
 }
 
+.Menu a{
+    text-decoration: none;
+}
+
 .div-button button{
     height: 48px;
     background: #B22CA7;
@@ -55,6 +59,8 @@ html,body{
     bottom: 5%;
     width:17%;
 }
+
+
 
 .div-button button i{
     color: #fff;
