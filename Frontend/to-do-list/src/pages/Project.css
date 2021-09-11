@@ -14,8 +14,11 @@ html,body{
     margin: 100px;
 }
 
-.progress{
+.teste{
     display: flex;
+}
+
+.progress{
     margin-top: 20px;
 }
 

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const tasksModel = new mongoose.Schema({
     title:{type:String, required:true},
     deadline:{type:String, required:true},
-    priority:{type:Number, required:true},
+    priority:{type:String},
     creationDate:{type:Date, default: Date.now}
 })
 

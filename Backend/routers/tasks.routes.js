@@ -1,8 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const Task = require('../models/tasks');
+const cors = require('cors');
+const app = express();
+
+app.use(express.json());
+app.use(cors());
 
 router.post('/add', async(req, res)=> {
+    const title = req.body.title
+    const date = req.body.date
+
+    const task = new TaskModel({title:title,date:date})
+    console.log(task)
     await Task.create(req.body)
     .then(()=> {
         res.status(200).send("Task added successfully!");

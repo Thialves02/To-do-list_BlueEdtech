@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 function Conn(url,user,pass,banco){
-mongoose.connect("mongodb://localhost:27017/todolist",{
+mongoose.connect("mongodb+srv://user:thiago2002@cluster0.4gd9q.mongodb.net/to-do-list?retryWrites=true&w=majority",{
     user: user,
     pass: pass,
     useNewUrlParser:true,
