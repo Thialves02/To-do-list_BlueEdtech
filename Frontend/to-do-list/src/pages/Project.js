@@ -1,9 +1,8 @@
 import React ,{useState, useEffect} from 'react';
-import Card from '../components/Cards/Cards';
+import Card from '../../src/components/Cards/Cards';
 import './Project.css'
-import {Api} from "../../src/api/api"
 import { Link } from 'react-router-dom';
-
+import { Api } from '../../src/api/api';
 
 const Project = () =>{
     const[tasks,setTask] = useState([]);

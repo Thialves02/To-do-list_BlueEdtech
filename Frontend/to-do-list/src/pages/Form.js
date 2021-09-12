@@ -16,13 +16,14 @@ const Form = () => {
             date:date,
             priority:priority,
         }
-        const response = await Api.buildPost(Task);
-        console.log(Task);
-        const data = await response.json() 
-        console.log(data);
 
+        try{
+            const response = await Api.buildPost(Task);     
+            const data = await response.json() 
+        }catch (error){
+            console.log(error);
+        }
     }
-    
 
     return(
         <>

@@ -13,6 +13,7 @@ const Card = (props) => {
             <h1>{task.date}</h1>
             <p>{task.priority}</p>
             <p>{task.creationDate}</p>
+            
         </div>
         </Link>
         </>
