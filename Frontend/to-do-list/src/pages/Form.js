@@ -1,11 +1,28 @@
-import React, {useState}from 'react';
+import React from 'react';
 import './Form.css';
 import {Link} from 'react-router-dom'
-
+import {Api} from "../../src/api/api"
 
 
 const Form = () => {
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const title = event.target.title.value;
+        const date = event.target.date.value;
+        const priority = event.target.priority.value;
+        const Task = {
+            title:title,
+            date:date,
+            priority:priority,
+        }
+        const response = await Api.buildPost(Task);
+        console.log(Task);
+        const data = await response.json() 
+        console.log(data);
+
+    }
+    
 
     return(
         <>
@@ -14,13 +31,13 @@ const Form = () => {
             <Link to='/project'><button><i class="fas fa-arrow-left"></i>BACK</button></Link>
             </div>
             <h1>Add task</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Title</label>
-                <input type="text" ></input>
+                <input type="text" id='title' name='title'></input>
                 <label>Date</label>
-                <input type="text"  ></input>
+                <input type="text" id='date' name='date'></input>
                 <label>Priority</label>
-                <input list="prioritys"  ></input>
+                <input list="prioritys" id='priority' name='priority'></input>
                 <datalist id="prioritys">
                     <option value="High"/>
                     <option value="Medium"/>

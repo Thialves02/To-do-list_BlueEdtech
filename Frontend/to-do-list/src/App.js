@@ -5,6 +5,7 @@ import Menu from './components/Menu/Menu';
 import Form from './pages/Form';
 import Home from './pages/Home';
 import Project from './pages/Project';
+import View from './pages/View';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' exact component={Home}/>
         <Route path='/project' exact component={Project}/>
         <Route path='/form' exact component={Form}/>
+        <Route path='/view/:id' component={View}/>
       </Switch>
     </Router>
     </div>

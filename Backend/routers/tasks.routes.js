@@ -7,21 +7,19 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-router.post('/add', async(req, res)=> {
-    const title = req.body.title
-    const date = req.body.date
-
-    const task = new TaskModel({title:title,date:date})
-    console.log(task)
-    await Task.create(req.body)
-    .then(()=> {
-        res.status(200).send("Task added successfully!");
-    })
-    .catch((err)=> {
-        res.status(400).send("Something went wrong. Try again later")
-        console.log(err)
-    });
-})
+router.post("/add", async (req, res) => {
+    // if(Controller(req.header.key)){
+        await Task.create(req.body)
+        .then(() => {
+            res.status(200).send("Musica adicionada com sucesso");
+        }).catch((err) => {
+            res.status(400).send("Algo errado com a musica, tente novamente");
+            console.error(err);
+        })
+    // }else{
+    //     res.status(403).end();
+    // }
+});
 router.get('/',(req, res) => {
     Task.find({})
     .then((task)=> {
@@ -32,6 +30,16 @@ router.get('/',(req, res) => {
         console.log(err)
     })
 })
+router.get('/findById/:id', async (req, res) => {
+    await Task.findOne({_id : req.params.id})
+    .then((task) => {
+        res.status(200).send(task);
+    })
+    .catch((err) => {
+        res.status(400).send("Something went wrong. Try again later");
+        console.log(err);
+    })
+});
 router.put("/update/:id", async (req, res) => {
     await Task.updateOne({_id : req.params.id},req.body)
     .then(()=> {
