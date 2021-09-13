@@ -13,3 +13,13 @@ html,body{
     width: 75%;
     margin: 100px;
 }
+
+.container p{
+    font-size:20px;
+    margin-top:15px;
+}
+
+.container img{
+    margin:  auto;
+    width:750px;
+}

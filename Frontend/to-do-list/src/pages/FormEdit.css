@@ -1,0 +1,33 @@
+
+.container .back-btn a button{
+    margin-left: -50px;
+    width:225px;
+    margin-bottom: 50px;
+    height:40px;
+    border-radius:5px;
+    border:none;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    line-height: 28px;
+    font-family: Roboto;
+    cursor: pointer;
+}
+
+.container .back-btn a button i{
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.container  button{
+    width:300px;
+    height:40px;
+    border-radius:5px;
+    border:none;
+    background: #B22CA7;
+    color: #fff;
+    font-size: 22px;
+    line-height: 28px;
+    font-family: Roboto;
+    cursor: pointer;
+}

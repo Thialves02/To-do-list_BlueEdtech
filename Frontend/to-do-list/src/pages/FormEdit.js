@@ -34,7 +34,7 @@ const FormEdit = (props) => {
         <>
         <div className="container">
             <div className="back-btn">
-            <Link to='/project'><button><i class="fas fa-arrow-left"></i>BACK</button></Link>
+            <Link to={`/view/${id}`}><button><i class="fas fa-arrow-left"></i>BACK</button></Link>
             </div>
             <h1>Edit task</h1>
             <form onSubmit={handleSubmit}>

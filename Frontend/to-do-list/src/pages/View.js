@@ -27,11 +27,21 @@ const View = (props) => {
 
     return(
         <>
-        <h1>{task.title}</h1>
-        <h1>{task.date}</h1>
-        <h1>{task.priority}</h1>
-        <button onClick={handleDelete}>DELETE</button>
-        <Link to={`/edit/${task._id}`} ><button>EDIT</button></Link>
+        <div className="container-view">
+            <div className="back-btn">
+            <Link to={`/project`}><button><i class="fas fa-arrow-left"></i>BACK</button></Link>
+            </div>
+            <label>Title</label>
+            <h1>{task.title}</h1>
+            <label>Deadline</label>
+            <h1>{task.date}</h1>
+            <label>Priority</label>
+            <h1>{task.priority}</h1>
+            <div className='buttons'>
+            <button onClick={handleDelete}>DELETE</button>
+            <Link to={`/edit/${task._id}`} ><button>EDIT</button></Link>
+            </div>
+        </div>
         </>
     );
 }

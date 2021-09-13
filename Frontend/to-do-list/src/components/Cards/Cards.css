@@ -1,8 +1,42 @@
-.card{
+a{
+    text-decoration: none;
+}
+a { color: inherit; } 
+
+a .card{
     background: #0084AD;
-    /* -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.74); 
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.418); */
-    width: 250px;
+    width: 300px;
     margin: 10px;
     border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    color: rgb(233, 233, 233);
+}
+
+a .card h1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:10px
+}
+
+a .card p{
+    margin:10px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:15px;
+    font-weight: 650;
+}
+
+a .card .date-priority{
+    display:flex;
+    align-items:center;
+    margin: 0 5px;
+    justify-content: space-between;
+}
+
+a .card .date-priority p{
+    font-size:25px;
+    font-weight: 650;
 }

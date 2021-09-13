@@ -10,8 +10,10 @@ const Card = (props) => {
         <Link to={`/view/${task._id}`}>
         <div className="card"> 
             <h1>{task.title}</h1>
-            <h1>{task.date}</h1>
-            <p>{task.priority}</p>
+            <div className="date-priority">
+                <h2>{task.date}</h2>
+                <p>{task.priority}</p>
+            </div>
             <p>{task.creationDate}</p>
             
         </div>
